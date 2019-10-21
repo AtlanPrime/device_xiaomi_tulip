@@ -659,6 +659,10 @@ vendor/firmware/cpp_firmware_v1_12_0.fw
 vendor/lib/libois_bu63165.so
 vendor/lib/libois_lc898122.so
 
+# Consumerir - from jasmine
+vendor/lib/hw/consumerir.default.so|f927b0ca8f81b78daa098872b27f599dd5a54141
+vendor/lib64/hw/consumerir.default.so|ad5c1c43bd7af8828efa20b7435f756d85a813b5
+
 # Fingerprint sensor
 -vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk
 vendor/bin/qfp-daemon
