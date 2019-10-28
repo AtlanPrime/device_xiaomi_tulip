@@ -54,5 +54,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 android.hardware.power@1.2-service
 
+# Watermark
+PRODUCT_COPY_FILES += \
+	$(DEVICE_PATH)/media/MIUI_DualCamera_watermark_twolip.png:$(TARGET_COPY_OUT_VENDOR)/etc/MIUI_DualCamera_watermark.png
+
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/twolip/twolip-vendor.mk)
