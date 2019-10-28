@@ -31,6 +31,7 @@ DEVICE_PATH := device/xiaomi/twolip
 TARGET_OTA_ASSERT_DEVICE := tulip,twolip
 
 # Kernel
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
 TARGET_KERNEL_CONFIG := tulip_defconfig
 
 # Manifest
@@ -39,5 +40,3 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 # Security patch level
 VENDOR_SECURITY_PATCH := 2018-11-01
 
-# Inherit the proprietary files
--include vendor/xiaomi/twolip/BoardConfigVendor.mk
