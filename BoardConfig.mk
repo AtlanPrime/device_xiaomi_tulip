@@ -30,6 +30,9 @@ DEVICE_PATH := device/xiaomi/twolip
 # Assert
 TARGET_OTA_ASSERT_DEVICE := tulip,twolip
 
+# DT2W
+TARGET_TAP_TO_WAKE_NODE := "/proc/wake_node"
+
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
 TARGET_KERNEL_CONFIG := tulip_defconfig
