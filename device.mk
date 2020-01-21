@@ -489,6 +489,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/perf/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile0.conf \
     $(DEVICE_PATH)/configs/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml
 
+# Power
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.device.rc
