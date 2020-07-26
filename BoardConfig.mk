@@ -130,6 +130,9 @@ TARGET_USES_HWC2 := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_ION := true
 
+# Display- surfaceflinger
+TARGET_USES_AOSP_SURFACEFLINGER := true
+
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
