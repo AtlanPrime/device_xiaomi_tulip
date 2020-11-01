@@ -40,5 +40,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_VENDOR_PRODUCT_NAME := tulip
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="tulip-user 9 PKQ1.180904.001 V11.0.5.0.PEKMIXM release-keys"
+    PRIVATE_BUILD_DESC="tulip-user 9 PKQ1.180904.001 V11.0.6.0.PEKMIXM release-keys"
+
+#Build FP to be picked by both system and vendor
+BUILD_FINGERPRINT := "google/coral/coral:11/RP1A.201005.004/6782484:user/release-keys"
 
