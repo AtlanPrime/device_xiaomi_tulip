@@ -6,22 +6,13 @@ ifneq ($(TARGET_USES_QMAA_OVERRIDE_DATA),true)
 endif #TARGET_USES_QMAA_OVERRIDE_DATA
 endif #TARGET_USES_QMAA
 
-BOARD_IPA_LOW_RAM_EXCP_LIST := bengal
-
-ifeq ($(TARGET_HAS_LOW_RAM),true)
-ifneq ($(call is-board-platform-in-list,$(BOARD_IPA_LOW_RAM_EXCP_LIST)),true)
-	TARGET_DISABLE_IPACM := true
-endif
-endif
 
 ifneq ($(TARGET_DISABLE_IPACM),true)
+ifneq ($(TARGET_HAS_LOW_RAM),true)
 BOARD_PLATFORM_LIST := msm8909
 BOARD_PLATFORM_LIST += msm8916
 BOARD_PLATFORM_LIST += msm8917
 BOARD_PLATFORM_LIST += qm215
-ifeq ($(TARGET_BOARD_SUFFIX),_gvmq)
-BOARD_PLATFORM_LIST += msmnile
-endif
 BOARD_IPAv3_LIST := msm8998
 BOARD_IPAv3_LIST += sdm845
 BOARD_IPAv3_LIST += sdm710
@@ -55,21 +46,7 @@ ifeq ($(call is-board-platform-in-list,$(BOARD_ETH_BRIDGE_LIST)),true)
 LOCAL_CFLAGS += -DFEATURE_ETH_BRIDGE_LE
 endif
 
-LOCAL_CFLAGS += -DFEATURE_IPACM_HAL
-LOCAL_CFLAGS += \
-        -Wall \
-        -Werror \
-        -Wno-constant-logical-operand \
-        -Wno-format \
-        -Wno-missing-field-initializers \
-        -Wno-sign-compare \
-        -Wno-sometimes-uninitialized \
-        -Wno-unused-parameter \
-        -Wno-unused-value \
-        -Wno-unused-variable \
-        -Wno-writable-strings \
-        -Wno-error=implicit-fallthrough
-
+LOCAL_CFLAGS += -DFEATURE_IPACM_HAL -Wall -Werror -Wno-error=macro-redefined
 ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 LOCAL_CFLAGS += -DDEBUG
 endif
@@ -157,6 +134,7 @@ LOCAL_MODULE_OWNER := ipacm
 include $(BUILD_PREBUILT)
 
 endif # $(TARGET_ARCH)
+endif
 endif
 endif
 endif
