@@ -182,7 +182,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_VERSION := 4.4
 
-TARGET_KERNEL_CONFIG := tulip_defconfig
+TARGET_KERNEL_CONFIG := hyperion_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/tulip
 
 # Enable stats logging in LMKD
